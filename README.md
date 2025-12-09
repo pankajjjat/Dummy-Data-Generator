@@ -37,5 +37,5 @@ Useful for testing file systems, backup tools, storage performance, or any app t
 Clone the repository:
 
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/pankajjjat/Dummy-Data-Generator.git
+cd 
