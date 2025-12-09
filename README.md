@@ -41,11 +41,7 @@ Perfect for testing how your system behaves under **realistic, messy, file-heavy
 
 ## 📸 Demo
 
-Place your screenshot image in the repo (example: `assets/demo-cli.png`) and it will show up here:
-
 ![Dummy Payload Forge CLI Demo](assets/demo-cli.png)
-
-> If you use a different path/file name, just update the image URL above.
 
 ---
 
