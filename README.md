@@ -60,14 +60,3 @@ You tell it **how big the dataset should be (MB/GB)** and it creates **thousands
   - Pure Python standard library. :contentReference[oaicite:3]{index=3}  
 
 ---
-
-## 📁 Repository Structure
-
-```text
-Dummy-Data-Generator/
-├─ dummy.py          # Main CLI script
-├─ README.md         # Project documentation
-├─ LICENSE           # MIT License
-├─ .gitignore        # Ignore cache, envs, generated data
-└─ assets/
-   └─ demo.png       # Screenshot / demo image (you add this)
