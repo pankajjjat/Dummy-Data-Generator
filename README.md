@@ -13,7 +13,7 @@ Dummy Payload Forge is a fast, flexible command-line tool for generating **lots 
 - Search / indexing engine stress tests  
 - Automation pipelines & CI experiments  
 
-You tell it **how big the dataset should be (MB/GB)** and it creates **thousands (or millions) of files** with configurable extensions and size ranges — all in a single output folder. :contentReference[oaicite:0]{index=0}  
+You tell it **how big the dataset should be (MB/GB)** and it creates **thousands (or millions) of files** with configurable extensions and size ranges — all in a single output folder.
 
 ---
 
