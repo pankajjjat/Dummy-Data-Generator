@@ -1,41 +1,65 @@
-# Advanced Dummy Data Generator
+# Dummy Payload Forge 🛠️
 
-A fast, flexible CLI tool to generate **lots of small dummy files** up to a target size (in MB).  
-Useful for testing file systems, backup tools, storage performance, or any app that needs a large number of random files.
+> Ultra-flexible dummy data generator for stress testing, filesystem benchmarking, backup tools, indexing engines, and automation pipelines.
 
----
+Dummy Payload Forge is a CLI tool that can create **thousands (or millions) of files** with customizable:
 
-## Features
+- total dataset size (MB/GB),
+- file extensions,
+- per-file size range,
+- approximate file count.
 
-- 🚀 **Fast**: Uses `os.urandom` with single-shot writes for small files.
-- 📁 **Single output folder**: All files are generated in one directory.
-- 🧩 **Multiple file types**:
-  - `txt, log, csv, json, xml, png, pdf, zip`
-- 🎯 **Target size in MB**:
-  - Provide `--target-mb` or use the interactive size menu.
-- 📊 **Approximate file count**:
-  - Use `--approx-files` and the script auto-tunes file size ranges around `target_mb / approx_files`.
-- 🎛️ **Fine-grained control**:
-  - `--ext` to pick specific extensions.
-  - `--min-size-kb` / `--max-size-kb` to override global file size range.
-- 🔍 **Dry-run mode**:
-  - Compute and print stats **without actually creating files**.
-- 🎲 **Reproducible runs**:
-  - `--seed` to fix the random generator seed.
+Perfect for testing how your system behaves under **realistic, messy, file-heavy workloads**.
 
 ---
 
-## Requirements
+## ✨ Features
+
+- ⚡ **Fast generation**
+  - Uses `os.urandom` and single-shot writes optimized for many small files.
+- 📂 **Single output folder**
+  - Everything is created in one directory for easy cleanup and testing.
+- 🧩 **Multiple file types**
+  - Built-in support:
+    - `txt`, `log`, `csv`, `json`, `xml`, `png`, `pdf`, `zip`
+- 🎯 **Target size in MB/GB**
+  - Define total dataset size via `--target-mb`  
+  - Or pick from an interactive preset menu.
+- 📊 **Approximate file count**
+  - Use `--approx-files` and the tool auto-tunes size range around `target_mb / approx_files`.
+- 🎛️ **Fine-grained control**
+  - `--ext` → choose specific extensions.
+  - `--min-size-kb` / `--max-size-kb` → global per-file size range.
+- 🧪 **Dry-run mode**
+  - Show plan & stats **without** touching the filesystem.
+- 🎲 **Reproducible runs**
+  - `--seed` → deterministic file size patterns (useful for benchmarks).
+- 🖼️ **Demo screenshot**
+  - See the CLI experience at a glance.
+
+---
+
+## 📸 Demo
+
+Place your screenshot image in the repo (example: `assets/demo-cli.png`) and it will show up here:
+
+![Dummy Payload Forge CLI Demo](assets/demo-cli.png)
+
+> If you use a different path/file name, just update the image URL above.
+
+---
+
+## 📦 Requirements
 
 - Python **3.8+**
-- No external dependencies (only the Python standard library).
+- No external dependencies (standard library only).
 
 ---
 
-## Installation
+## 🔧 Installation
 
 Clone the repository:
 
 ```bash
 git clone https://github.com/pankajjjat/Dummy-Data-Generator.git
-cd Dummy-Data-Generator-main
+cd Dummy-Data-Generator
