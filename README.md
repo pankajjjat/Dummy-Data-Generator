@@ -38,4 +38,4 @@ Clone the repository:
 
 ```bash
 git clone https://github.com/pankajjjat/Dummy-Data-Generator.git
-cd 
+cd Dummy-Data-Generator-main
