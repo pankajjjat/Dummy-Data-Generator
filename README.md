@@ -19,8 +19,6 @@ You tell it **how big the dataset should be (MB/GB)** and it creates **thousands
 
 ## 📸 Demo
 
-> _You can replace this image with your own screenshot._
-
 ![Dummy Payload Forge Demo](assets/demo.png)
 
 ---
