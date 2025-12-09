@@ -58,3 +58,10 @@ You tell it **how big the dataset should be (MB/GB)** and it creates **thousands
   - Pure Python standard library. :contentReference[oaicite:3]{index=3}  
 
 ---
+🚀 Installation
+
+Clone the repository:
+
+- git clone https://github.com/pankajjjat/Dummy-Data-Generator.git
+- cd Dummy-Data-Generator
+- python dummy.py
