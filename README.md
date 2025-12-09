@@ -1,61 +1,73 @@
-# Dummy Payload Forge 🛠️
+# Dummy Payload Forge 🧪📂  
+_Advanced CLI tool for generating tons of realistic dummy files_
 
-> Ultra-flexible dummy data generator for stress testing, filesystem benchmarking, backup tools, indexing engines, and automation pipelines.
+[![Python](https://img.shields.io/badge/python-3.8%2B-blue)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![Status](https://img.shields.io/badge/status-active-success)](#)
+[![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](#contributing)
 
-Dummy Payload Forge is a CLI tool that can create **thousands (or millions) of files** with customizable:
+Dummy Payload Forge is a fast, flexible command-line tool for generating **lots of small files** for:
 
-- total dataset size (MB/GB),
-- file extensions,
-- per-file size range,
-- approximate file count.
+- Filesystem & storage testing  
+- Backup & sync tool benchmarking  
+- Search / indexing engine stress tests  
+- Automation pipelines & CI experiments  
 
-Perfect for testing how your system behaves under **realistic, messy, file-heavy workloads**.
-
----
-
-## ✨ Features
-
-- ⚡ **Fast generation**
-  - Uses `os.urandom` and single-shot writes optimized for many small files.
-- 📂 **Single output folder**
-  - Everything is created in one directory for easy cleanup and testing.
-- 🧩 **Multiple file types**
-  - Built-in support:
-    - `txt`, `log`, `csv`, `json`, `xml`, `png`, `pdf`, `zip`
-- 🎯 **Target size in MB/GB**
-  - Define total dataset size via `--target-mb`  
-  - Or pick from an interactive preset menu.
-- 📊 **Approximate file count**
-  - Use `--approx-files` and the tool auto-tunes size range around `target_mb / approx_files`.
-- 🎛️ **Fine-grained control**
-  - `--ext` → choose specific extensions.
-  - `--min-size-kb` / `--max-size-kb` → global per-file size range.
-- 🧪 **Dry-run mode**
-  - Show plan & stats **without** touching the filesystem.
-- 🎲 **Reproducible runs**
-  - `--seed` → deterministic file size patterns (useful for benchmarks).
-- 🖼️ **Demo screenshot**
-  - See the CLI experience at a glance.
+You tell it **how big the dataset should be (MB/GB)** and it creates **thousands (or millions) of files** with configurable extensions and size ranges — all in a single output folder. :contentReference[oaicite:0]{index=0}  
 
 ---
 
 ## 📸 Demo
 
-![Dummy Payload Forge CLI Demo](assets/demo-cli.png)
+> _You can replace this image with your own screenshot._
+
+![Dummy Payload Forge Demo](assets/demo.png)
 
 ---
 
-## 📦 Requirements
+## ✨ Features
 
-- Python **3.8+**
-- No external dependencies (standard library only).
+- **Fast generation**  
+  Uses efficient random byte generation and single-shot writes for small files for good throughput.
+
+- **Single output directory**  
+  All dummy files are written to one target folder (easy to delete / test / mount).
+
+- **Multiple file types**  
+  Supports a mix of common extensions, e.g. `txt`, `log`, `csv`, `json`, `xml`, `png`, `pdf`, `zip` (and more as you evolve the script). :contentReference[oaicite:1]{index=1}  
+
+- **Target dataset size (MB)**  
+  - Pass a target size with `--target-mb`  
+  - Or use the interactive menu to quickly choose “100 MB / 500 MB / 1 GB / custom” (depending on your script logic).
+
+- **Approximate file count**  
+  - Use `--approx-files` to say **how many files** you want  
+  - The script then adjusts file size ranges around:  
+    `target_mb / approx_files` (in KB/bytes). :contentReference[oaicite:2]{index=2}  
+
+- **Fine-grained control**  
+  - `--ext` → restrict to specific extensions  
+  - `--min-size-kb` / `--max-size-kb` → override default file size range
+
+- **Dry-run mode**  
+  - See how many files _would_ be created and approximate disk usage  
+  - No files actually written (useful for planning).
+
+- **Reproducible runs**  
+  - `--seed` → fix the random seed so runs are repeatable.
+
+- **Zero external dependencies**  
+  - Pure Python standard library. :contentReference[oaicite:3]{index=3}  
 
 ---
 
-## 🔧 Installation
+## 📁 Repository Structure
 
-Clone the repository:
-
-```bash
-git clone https://github.com/pankajjjat/Dummy-Data-Generator.git
-cd Dummy-Data-Generator
+```text
+Dummy-Data-Generator/
+├─ dummy.py          # Main CLI script
+├─ README.md         # Project documentation
+├─ LICENSE           # MIT License
+├─ .gitignore        # Ignore cache, envs, generated data
+└─ assets/
+   └─ demo.png       # Screenshot / demo image (you add this)
